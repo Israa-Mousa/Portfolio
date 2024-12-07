@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=10.0">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
     <title>Israa Mazaraa Portfolio</title>
     <link rel="icon" href="JHF.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
 
 </head>
 
@@ -18,7 +19,7 @@
             <img src="ProfileImage.png">
         </header>
 
-            <ul>
+            <ul class="menu">
                 <li type=""><a href="#about">About Me</a></li>
                 <li><a href="#resume">Resume</a></li>
                 <li><a href="#projects">My Projects</a></li>
@@ -98,106 +99,88 @@
         
         <div id="projects">
             <h2>My Projects</h2>
-            <ol type="1">
-                <li>
+            <div class="projects-container">
+                <div class="project">
                     <h3>Full EDA Report</h3>
-                    <p>Full eda report for patients data as Gradation project of data scince training with Center for contiinimg Education Birzeit .to Explore fraud detection by classify the data </p>
+                    <p>Full EDA report for patient data as Gradation project of data science training with Center for Continuing Education Birzeit. To explore fraud detection by classifying the data.</p>
                     <img src="patient.jpg" width="280px" alt="Fraud detection">
-                </li>
-                <li>
+                </div>
+                <div class="project">
                     <h3>Ecommerce testing project</h3>
-                    <p> build testing project using cypress toli for Ecommerce system As Gradation project of Asal training </p>
-                    <img src="images.png" width="280px" alt="Fraud detection">
-                </li>
-                <li>
-                    <h3> Testing project</h3>
-                    <p> build testing project using cypress toli of Foothill training </p>
-                    <img src="images.png" width="280px" alt="Fraud detection">
-                </li>
-                <li>
-                    <h3>Gaza Sky Geeks News </h3>
-                    <p>Build laravel project (CMS , application) as Gradation project of Gaza Sky Geeks Gradation of Laravel training</p>
-                    <img src="Gaza.png" width="280px" alt="Fraud detection">
-                </li>
-                <li>
+                    <p>Build a testing project using Cypress tool for the Ecommerce system as a Gradation project of Asal training.</p>
+                    <img src="images.png" width="280px" alt="Ecommerce testing">
+                </div>
+                <div class="project">
+                    <h3>Testing project</h3>
+                    <p>Built a testing project using Cypress tool for Foothill training.</p>
+                    <img src="images.png" width="280px" alt="Testing project">
+                </div>
+                <div class="project">
+                    <h3>Gaza Sky Geeks News</h3>
+                    <p>Built a Laravel project (CMS, application) as a Gradation project of Gaza Sky Geeks Laravel training.</p>
+                    <img src="Gaza.png" width="280px" alt="Gaza Sky Geeks News">
+                </div>
+                <div class="project">
                     <h3>Software Defined Radio</h3>
-                    <p>As Gradation project from Birziet university we build hardware project that send the signal using Radio waves</p>
-                    <img src="Waves.jpg"  width="280px"  alt="Fraud detection">
-                </li>
-            </ol>
-            <br>
-            <br>
-            <div>
-              
+                    <p>As a Gradation project from Birzeit University, we built a hardware project that sends signals using Radio waves.</p>
+                    <img src="Waves.jpg" width="280px" alt="Software Defined Radio">
+                </div>
             </div>
+        </div>
+        
+
+              
+      
             <div id="contact">
-                    
                 <h2>Contact Me</h2>
                 <form action="" method="post">
                     <div>
                         <label for="name">Name:</label>
                         <input type="text" name="name" id="name" placeholder="Please enter your name">
                     </div>
-                   <br>
-                   <br>
-
                     <div>
                         <label for="email">Email:</label>
                         <input type="email" name="email" id="email" placeholder="Please enter your email">
                     </div>
-                    <br>
-                    <br>
                     <div>
-                        <label for="tel">Telephone</label>
-                        <input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">                    </div>
-                    <br>
-                    <br>
+                        <label for="tel">Telephone:</label>
+                        <input type="tel" id="tel" name="tel" placeholder="123-45-678">
+                    </div>
                     <div>
                         <label for="description">Description:</label>
                         <textarea name="description" id="description" placeholder="Please enter your description"></textarea>
                     </div>
-                    <label>
-                        Education
-                    </label>
-                 <select id="education" name="education">
-                    <option value="" disabled checked>choose ur education</option>
-
-                    <option value="ENCS">ENCS</option>
-                    <option value="CS">CS</option>
-    
-                 </select>
-                 <div id="language">
-                    <h2>Language</h2>
                     <div>
-                        <input type="checkbox" name="language" checked> English
+                        <label for="education">Education:</label>
+                        <select id="education" name="education">
+                            <option value="" disabled selected>Choose your education</option>
+                            <option value="ENCS">ENCS</option>
+                            <option value="CS">CS</option>
+                        </select>
+                    </div>
+                    <div id="language">
+                        <h2>Language</h2>
                         <div>
-                            <span>Level</span>
-                            <!-- Unique name for English radio buttons -->
-                            <input type="radio" name="english_level" value="1" checked> Mother language
-                            <input type="radio" name="english_level" value="2"> Good
-                            <input type="radio" name="english_level" value="3"> Bad
+                            <input type="checkbox"  class="check" name="language" checked>
+                            <label>English</label>
+                            <span>Level:</span>
+                            <input type="radio" class="radio" name="english_level" value="1" checked> Mother language
+                            <input type="radio" class="radio" name="english_level" value="2"> Good
+                            <input type="radio" class="radio" name="english_level" value="3"> Bad
+                        </div>
+                        <div>
+                            <input type="checkbox" class="check"  name="language" checked>
+                            <label>Arabic</label>
+                            <span>Level:</span>
+                            <input type="radio"  class="radio" name="arabic_level" value="1"> Mother language
+                            <input type="radio"  class="radio"  name="arabic_level" value="2" checked> Good
+                            <input type="radio"  class="radio"  name="arabic_level" value="3"> Bad
                         </div>
                     </div>
-                    <div>
-                        <input type="checkbox" name="language" checked> Arabic
-                        <div>
-                            <span>Level</span>
-                            <!-- Unique name for Arabic radio buttons -->
-                            <input type="radio" name="arabic_level" value="1"> Mother language
-                            <input type="radio" name="arabic_level" value="2" checked> Good
-                            <input type="radio" name="arabic_level" value="3"> Bad
-                        </div>
-                    </div>
-                </div>
-                
-                    <br>
-                    <br>
-                    <button  type="submit" > Send </button>
+                    <button type="submit">Send</button>
                 </form>
-               
-                
-    
             </div>
+            
           
             <hr>
           
@@ -227,7 +210,7 @@
             </footer>
         </div>
       </div>
-
+    </div>
 </body>
 
 </html>
